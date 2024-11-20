@@ -11,31 +11,36 @@ person = {}
 while True:
     while True:
         try:
-            name = input("enter your name: ")
-            age = int(input("enter your age: "))
-            number = (input("enter your number: "))
-            address = input("enter your address: ")
-            guardian = input("any parents or close relatives?: ")
+            IGN = input("enter your in game name: ")
+            level = int(input("enter your age: "))
+            MLID = (input("enter your account ID: "))
+            server = input("enter your server: ")
+            guardian = input("enter name of guardian: ")
+            role = input("enter your role: ")
+            rank = input("what is your current rank: ")
 
-            if len(number) != 11: 
-                print("number must be 11 digits")
+            if len(MLID) != 10: 
+                print("number must be 10 digits")
                 continue
             
-            person[name] = {
-                "name" : name,
-                "age" : age,
-                "number" : number,
-                "address" : address,
-                "guardian" : guardian
+            person[IGN] = {
+                "IGN" : IGN,
+                "level" : level,
+                "MLID" : MLID,
+                "server" : server,
+                "guardian" : guardian,
+                "role" : role,
+                "rank" : rank
+                
             }
 
             with open("c:\\Users\\kensh\\OneDrive - DepEd-NCR\\coding assignment text file\\text_file.py", "a") as file_handler:
-                file_handler.write(str(person[name], "\n"))
+                file_handler.write(str(person[IGN]))
         
 
-            print("your input has been saved")
+            print("your input has been saved, welcome to mobile legends")
             break
 
-        except:
+        except ValueError:
             print("wrong input, please enter again")
     
