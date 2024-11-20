@@ -15,7 +15,7 @@ while True:
             age = int(input("enter your age: "))
             number = int(input("enter your number: "))
             address = input("enter your address: ")
-            enumber = int(input("in case of emergency, who else do we call?: "))
+            guardian = input("any parents or close relatives?: ")
 
             if len(number) > 11 or len(number)< 11:
                 False
