@@ -13,13 +13,13 @@ while True:
         try:
             name = input("enter your name: ")
             age = int(input("enter your age: "))
-            number = int(input("enter your number: "))
+            number = (input("enter your number: "))
             address = input("enter your address: ")
             guardian = input("any parents or close relatives?: ")
 
             if len(number) != 11: 
                 print("number must be 11 digits")
-                False
+                continue
             
             person[name] = {
                 "name" : name,
@@ -29,10 +29,11 @@ while True:
                 "guardian" : guardian
             }
 
-            with open("C:\\Users\\kensh\\OneDrive - DepEd-NCR\\coding assignment text file", "a") as file_handler:
-                file_handler.write(person)
+            with open("c:\\Users\\kensh\\OneDrive - DepEd-NCR\\coding assignment text file\\text_file.py", "a") as file_handler:
+                file_handler.write((person[name]))
 
             print("your input has been saved")
             break
+
         except:
-            print("wrong input")
+            print("wrong input, please enter correct values")
