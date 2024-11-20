@@ -12,8 +12,11 @@ while True:
     while True:
         try:
             name = input("enter your name: ")
-            age = int(input("enter your ageZ: "))
+            age = int(input("enter your age: "))
             number = int(input("enter your number: "))
+            address = input("enter your address: ")
+            enumber = int(input("in case of emergency, who else do we call?: "))
+
 
 
 
