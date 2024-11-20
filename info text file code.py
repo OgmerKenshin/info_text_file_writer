@@ -19,6 +19,14 @@ while True:
 
             if len(number) > 11 or len(number)< 11:
                 False
+            
+            person(name) = {
+                "name" : name,
+                "age" : age,
+                "number" : number,
+                "address" : address,
+                "guardian" : guardian
+            }
 
 
 
