@@ -30,10 +30,12 @@ while True:
             }
 
             with open("c:\\Users\\kensh\\OneDrive - DepEd-NCR\\coding assignment text file\\text_file.py", "a") as file_handler:
-                file_handler.write((person[name]))
+                file_handler.write(str(person[name], "\n"))
+        
 
             print("your input has been saved")
             break
 
         except:
-            print("wrong input, please enter correct values")
+            print("wrong input, please enter again")
+    
