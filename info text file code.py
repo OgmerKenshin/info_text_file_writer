@@ -17,10 +17,10 @@ while True:
             address = input("enter your address: ")
             guardian = input("any parents or close relatives?: ")
 
-            if len(number) > 11 or len(number)< 11:
+            if len(number) > 11 or len(number) < 11:
                 False
             
-            person(name) = {
+            person[name] = {
                 "name" : name,
                 "age" : age,
                 "number" : number,
@@ -28,10 +28,8 @@ while True:
                 "guardian" : guardian
             }
 
-
-
-
-
-
-
+            with open("C:\\Users\\kensh\\OneDrive - DepEd-NCR\\coding assignment text file", "a") as file_handler:
+                file_handler.write(person)
+            break
         except:
+            print("wrong input")
