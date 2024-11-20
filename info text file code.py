@@ -17,6 +17,10 @@ while True:
             address = input("enter your address: ")
             enumber = int(input("in case of emergency, who else do we call?: "))
 
+            if len(number) > 11 or len(number)< 11:
+                False
+
+
 
 
 
