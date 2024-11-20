@@ -10,3 +10,10 @@ person = {}
 
 while True:
     while True:
+        try:
+
+
+
+
+            
+        except:
