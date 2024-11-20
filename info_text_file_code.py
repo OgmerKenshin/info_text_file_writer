@@ -5,3 +5,5 @@
 #put in the user input statements
 #place the input info in a dictionary for each person
 #write output in a textfile
+
+person = {}
