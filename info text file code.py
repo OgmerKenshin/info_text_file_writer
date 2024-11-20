@@ -11,9 +11,10 @@ person = {}
 while True:
     while True:
         try:
+            name = input("enter your name: ")
 
 
 
 
-            
+
         except:
