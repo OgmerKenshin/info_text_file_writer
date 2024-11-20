@@ -17,7 +17,7 @@ while True:
             address = input("enter your address: ")
             guardian = input("any parents or close relatives?: ")
 
-            if len(number) > 11 or len(number) < 11:
+            if len(number) != 11: 
                 print("number must be 11 digits")
                 False
             
