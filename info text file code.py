@@ -6,6 +6,9 @@
 #place the input info in a dictionary for each person
 #write output in a textfile
 
+
+import json
+
 person = {}
 
 while True:
@@ -34,11 +37,11 @@ while True:
                 
             }
 
-            with open("c:\\Users\\kensh\\OneDrive - DepEd-NCR\\coding assignment text file\\text_file.py", "a") as file_handler:
-                file_handler.write("\n" + str(person[IGN]))
+            with open("C:/Users/kensh/OneDrive/Desktop/txt_file", "a") as file_handler:
+                json.dump(person, file_handler, indent=4)
         
 
-            print("your input has been saved, welcome to mobile legends")
+            print("your input has been saved as json file, welcome to mobile legends")
             break
 
         except ValueError:
