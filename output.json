@@ -1,0 +1,11 @@
+list of players{
+    "kenshin": {
+        "IGN": "kenshin",
+        "level": 12,
+        "MLID": "1234567891",
+        "server": "12",
+        "guardian": "ph",
+        "role": "tank",
+        "rank": "mg"
+    }
+}

@@ -5,12 +5,11 @@
 #put in the user input statements
 #place the input info in a dictionary for each person
 #write output in a textfile
-
-
 import json
 
-person = {}
 
+person = {}
+file_hold = "output.json"
 while True:
     while True:
         try:
@@ -37,7 +36,7 @@ while True:
                 
             }
 
-            with open("C:/Users/kensh/OneDrive/Desktop/txt_file", "a") as file_handler:
+            with open(file_hold, "a") as file_handler:
                 json.dump(person, file_handler, indent=4)
         
 

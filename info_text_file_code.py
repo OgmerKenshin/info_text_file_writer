@@ -5,5 +5,11 @@
 #put in the user input statements
 #place the input info in a dictionary for each person
 #write output in a textfile
+import json
 
-person = {}
+data = "list of players"
+file_hold = "output.json"
+
+with open(file_hold, "w") as file:
+    file.write(data)
+    print("output dile initialized")
