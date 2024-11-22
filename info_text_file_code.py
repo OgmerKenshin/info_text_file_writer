@@ -13,7 +13,7 @@ IGN = input("enter your in game name: ")
 
 try: 
     with open(file_hold, "r") as file:
-        
+        info = json.load(file)
 
 
 
