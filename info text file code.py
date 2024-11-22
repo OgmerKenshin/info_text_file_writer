@@ -41,8 +41,9 @@ while True:
         
 
             print("your input has been saved as json file, welcome to mobile legends")
-            break
-
-        except ValueError:
+        except:
             print("wrong input, please enter again")
+        break
+    break
+
     
