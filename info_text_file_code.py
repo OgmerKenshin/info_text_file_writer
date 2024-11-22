@@ -10,3 +10,9 @@ import json
 file_hold = "output.json"
 
 IGN = input("enter your in game name: ")
+
+try: 
+
+
+    
+except:
