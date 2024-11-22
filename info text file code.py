@@ -23,7 +23,7 @@ while True:
 
             if len(MLID) != 10: 
                 print("number must be 10 digits")
-                continue
+                False
             
             person[IGN] = {
                 "IGN" : IGN,
