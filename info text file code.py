@@ -9,7 +9,7 @@ import json
 
 
 person = {}
-file_hold = "output.json"
+file_path = "output.json"
 while True:
     while True:
         try:
@@ -36,7 +36,7 @@ while True:
                 
             }
 
-            with open(file_hold, "a") as file_handler:
+            with open(file_path, "a") as file_handler:
                 json.dump(person, file_handler, indent=4)
         
 

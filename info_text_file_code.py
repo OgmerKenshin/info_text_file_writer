@@ -5,6 +5,11 @@
 #search for the user input
 # handle errors
 
+file_path = "output.json"
+with open(file_path, "w") as file:
+      pass
+
+
 import json
 
 file_hold = "output.json"
