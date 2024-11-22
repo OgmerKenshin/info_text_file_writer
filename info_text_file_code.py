@@ -17,6 +17,10 @@ try:
 
     for IGN in info:
         if IGN_input == info[IGN]:
+            print(f"Here is the data for {IGN}: {IGN_input}")
+        else: 
+            print("no input info for IGN")
+            
 
 
 
