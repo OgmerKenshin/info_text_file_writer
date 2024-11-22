@@ -6,3 +6,5 @@
 # handle errors
 
 import json
+
+file_hold = "output.json"
