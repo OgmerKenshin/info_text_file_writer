@@ -9,11 +9,15 @@ import json
 
 file_hold = "output.json"
 
-IGN = input("enter your in game name: ")
+IGN_input = input("enter your in game name: ")
 
 try: 
     with open(file_hold, "r") as file:
         info = json.load(file)
+
+    for IGN in info:
+        if IGN_input == info[IGN]:
+
 
 
 
