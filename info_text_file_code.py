@@ -20,9 +20,6 @@ try:
             print(f"Here is the data for {IGN}: {IGN_input}")
         else: 
             print("no input info for IGN")
-            
-
-
-
 
 except:
+    print("Invalid input")
