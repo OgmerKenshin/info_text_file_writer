@@ -12,16 +12,14 @@ with open(file_path, "w") as file:
 
 import json
 
-file_hold = "output.json"
 
 IGN_input = input("enter your in game name: ")
 
-with open(file_hold, "r") as file:
-        info = json.load(file)
+with open(file_path, "r", encoding="utf-8") as file:
+        contents = file.read()
+        print(contents)
 
-for IGN in info:
-        if IGN_input == info[IGN]:
-            print(f"Here is the data for {IGN}: {IGN_input}")
-        else: 
-            print("no input info for IGN")
+
+info = json.loads(contents)
+print("json file loaded success")
 
