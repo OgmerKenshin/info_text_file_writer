@@ -13,7 +13,16 @@ while True:
       search_ign = ("enter your IGN: ").strip()
 
 
-      
+      searched = False
+      with open(file_path, "r") as file:
+            info = []
+            for line in file:
+                  line = line.strip()
+                  if line.startswith("IGN:"):
+                        if info and info[0] == f"IGN: {search_ign}":
+                              searched = True
+                              break
+                        info = [line]
 
 
       
