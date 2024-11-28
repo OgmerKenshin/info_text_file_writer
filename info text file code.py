@@ -31,7 +31,6 @@ while True:
                 "MLID" : MLID,
                 "server" : server,
                 "guardian" : guardian,
-                "role" : role,
                 "rank" : rank
                 
             }
@@ -42,13 +41,13 @@ while True:
                 file_handler.write(f"MLID: {MLID}\n")
                 file_handler.write(f"server: {server}\n")
                 file_handler.write(f"guardian: {guardian}\n")
-                file_handler.write(f"role: {role}\n")
                 file_handler.write(f"rank: {rank}\n")
                 print("\n")
         
         
         
             print("your input has been saved as txt file, welcome to mobile legends")
+            break
         except:
             print("wrong input, please enter again")
             break

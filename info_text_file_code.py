@@ -4,37 +4,30 @@
 #open and read json file
 #search for the user input
 # handle errors
+
 file_path = "output.txt"
-with open(file_path, "w") as file:
-      pass
-
-
 while True:
-      search_ign = ("enter your IGN: ").strip()
+    search_ign = ("enter your IGN: ")
 
 
-      searched = False
-      with open(file_path, "r") as file:
-            info = []
-            for line in file:
-                  line = line.strip()
-                  if line.startswith("IGN:"):
-                        if info and info[0] == f"IGN: {search_ign}":
-                              searched = True
-                              break
-                        info = [line]
-                  elif info:
-                        info.append(line)
-                  else:
-                        if info and info[0] == f"IGN: {search_ign}":
-                              searched = True
+    searched = False
+    with open(file_path, "r") as file:
+        info = []
+        for line in file:
+          line = line
+          if line.startswith("IGN:"): 
+                if info and info[0] == f"ign: {search_ign}":
+                    searched = True
+                    
+                info = [line]
+          elif info:
+                info.append(line)
 
-      if searched:
-            print(f"info on {search_ign}")
+                
+          if searched is True:
+                 print(f"info on {search_ign}")
+                 print(f"\n".join(info))
             
-      else:
-            print(f"IGN {search_ign} not found.")
-
       
       
 

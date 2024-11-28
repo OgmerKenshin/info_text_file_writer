@@ -1,0 +1,6 @@
+IGN: angge
+level: 19
+MLID: 1234567891
+server: ph
+guardian: tita
+rank: mythical honor
