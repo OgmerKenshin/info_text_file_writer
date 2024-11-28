@@ -23,6 +23,11 @@ while True:
                               searched = True
                               break
                         info = [line]
+                  elif info:
+                        info.append(line)
+                  else:
+                        if info and info[0] == f"IGN: {search_ign}":
+                              searched = True
 
 
       
