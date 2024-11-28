@@ -29,6 +29,11 @@ while True:
                         if info and info[0] == f"IGN: {search_ign}":
                               searched = True
 
+      if searched:
+            print(f"info on {search_ign}")
+            
+      else:
+            print(f"IGN {search_ign} not found.")
 
       
       
