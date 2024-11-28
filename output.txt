@@ -1,0 +1,14 @@
+IGN: badi
+level: 17
+MLID: 1234567891
+server: ph
+guardian: aia
+role: gold laner
+rank: legend
+IGN: kenshin
+level: 18
+MLID: 1209847398
+server: ph
+guardian: mom
+role: exp
+rank: mg

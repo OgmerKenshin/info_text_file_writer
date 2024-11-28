@@ -5,11 +5,11 @@
 #put in the user input statements
 #place the input info in a dictionary for each person
 #write output in a textfile
-import json
+
 
 
 person = {}
-file_path = "output.json"
+file_path = "output.txt"
 while True:
     while True:
         try:
@@ -37,13 +37,21 @@ while True:
             }
 
             with open(file_path, "a") as file_handler:
-                json.dump(person, file_handler, indent=4)
+                file_handler.write(f"IGN: {IGN}\n")
+                file_handler.write(f"level: {level}\n")
+                file_handler.write(f"MLID: {MLID}\n")
+                file_handler.write(f"server: {server}\n")
+                file_handler.write(f"guardian: {guardian}\n")
+                file_handler.write(f"role: {role}\n")
+                file_handler.write(f"rank: {rank}\n")
+                print("\n")
         
-
-            print("your input has been saved as json file, welcome to mobile legends")
+        
+        
+            print("your input has been saved as txt file, welcome to mobile legends")
         except:
             print("wrong input, please enter again")
-        break
+            break
     try:
         retry = input("do you wanna input again? y/n: " )
         if retry == "n":
