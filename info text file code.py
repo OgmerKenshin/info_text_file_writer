@@ -44,6 +44,14 @@ while True:
         except:
             print("wrong input, please enter again")
         break
-    break
+    try:
+        retry = input("do you wanna input again? y/n: " )
+        if retry == "n":
+            print("ok")
+            break
+        else: 
+            continue
+    except:
+        print("invalid, y/n only.")
 
     
