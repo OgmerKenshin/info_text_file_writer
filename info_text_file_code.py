@@ -4,22 +4,23 @@
 #open and read json file
 #search for the user input
 # handle errors
-
+import json
 file_path = "output.json"
 with open(file_path, "w") as file:
       pass
 
 
-import json
-
-
-IGN_input = input("enter your in game name: ")
 
 with open(file_path, "r", encoding="utf-8") as file:
         contents = file.read()
-        print(contents)
+        print("file read")
+        
+while True: 
+      search_IGN = input("enter your in game name: ")
+      searched = None
+      for key, value in file.items():
+             if value.get("IGN") == search_IGN:
+                    found = value
+                    break
 
-
-info = json.loads(contents)
-print("json file loaded success")
 
