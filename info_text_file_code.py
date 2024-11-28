@@ -9,5 +9,16 @@ with open(file_path, "w") as file:
       pass
 
 
+while True:
+      search_ign = ("enter your IGN: ").strip()
+
+
+      
+
+
+      
+      
+
+
 
 
