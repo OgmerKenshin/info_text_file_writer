@@ -4,7 +4,7 @@
 #open and read json file
 #search for the user input
 # handle errors
-
+info_dictionary = {}
 file_path = "output.txt"
 while True:
     search_ign = input("enter your IGN: ")
@@ -16,15 +16,16 @@ while True:
         info = []
 
         for i, line in enumerate(lines):
-          if line.startswith(f"IGN: {search_ign}") and not line.startswith(f"IGN: "): 
-                searched = True
-                info.append(line.strip())
+          line= line.strip()
 
-                for subsequent_line in lines[i + 1:]:
-                     if subsequent_line.startswith("IGN:"):
-                          break
-                     info.append(subsequent_line.strip())
-
+          if line.startswith(f"IGN:"): 
+                if info:
+                    ign = info[0].split(": ")[1]
+                    info_dictionary[ign] = info
+                info = [line]
+                    
+                
+                
         
       
                 
