@@ -12,23 +12,32 @@ while True:
 
     searched = False
     with open(file_path, "r") as file:
+        lines = file.readlines()
         info = []
-        for i, line in file:
+
+        for i, line in enumerate(lines):
           if line.startswith(f"IGN: {search_ign}"): 
-                searched = True 
-                info = [line]
-                info.append(line)
-          for k in range(i +1, len(line)):
-               if line[k].startswith("IGN:"): 
-                   break
-               info.append(line[k])
-               break
+                searched = True
+                info.append(lines)
+
+                for subsequent_line in lines[i + 1:]:
+                     if subsequent_line.startswith("IGN:"):
+                          break
+                     info.append(subsequent_line)
+
+        
+      
+            
 
                 
-          if searched is True:
-                 print(f"info on {search_ign}")
-                 print(f"\n".join(info))
-                 break
+          if searched == True:
+            print(f"info on {search_ign}")
+            print(f"\n".join(info))
+            break
+          else:
+            print(f"no info for {search_ign}")
+            break
+               
       
       
 
