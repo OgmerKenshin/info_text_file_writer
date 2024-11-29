@@ -6,36 +6,57 @@
 # handle errors
 
 file_path = "output.txt"
-while True:
-    search_ign = input("enter your IGN: ")
 
 
-    searched = False
-    with open(file_path, "r") as file:
-        lines = file.readlines()
-        info = []
+info = []
+info_dict = {}
 
-        for i, line in enumerate(lines):
-          line= line.strip()
 
-          if line.startswith(f"IGN: ") and not line.startswith(f"IGN: "): 
-                searched = True
-                info.append(line.strip())
+with open(file_path, "r") as file:
+      current_ign = None
 
-                for subsequent_line in lines[i + 1:]:
-                     if subsequent_line.startswith("IGN:"):
-                          break
-                     info.append(subsequent_line.strip())
+      for line in file:
+         line = line.strip()
 
-        
-      
+         if line.startswith("IGN:"): 
+            current_ign = line.split(": ")[1]
+            info_dict[current_ign] = [line]
+
+         elif current_ign:
+            info_dict[current_ign].append(line)
+
+
+while True:        
+      while True:
+             try: 
+                search_ign = input("IGN please: ")
                 
-          if searched == True:
-            print(f"info on {search_ign}")
-            print(f"\n".join(info))
+                if search_ign.lower() in info_dict:
+                 print(f"info on {search_ign}")
+                 print(f"\n".join(info_dict[search_ign]))
+                 break
+       
             
-          else:
-            print(f"no info for {search_ign}")
+                else:
+                  print(f"no info for {search_ign}")
+                  break
+         
+             except:
+               print("wrong input, try again.")
+               break
+      try:
+        retry = input("do you wanna input again? y/n: " )
+        if retry == "n":
+            print("maybe another day then")
+            break
+        else: 
+            continue
+      except:
+         print("invalid, y/n only.")
+         break
+         
+
+       
             
                
       
