@@ -8,7 +8,7 @@
 file_path = "output.txt"
 
 
-info = []
+
 info_dict = {}
 
 
@@ -19,7 +19,7 @@ with open(file_path, "r") as file:
          line = line.strip()
 
          if line.startswith("IGN:"): 
-            current_ign = line.split(": ")[1]
+            current_ign = line.split(": ")[1].lower()     
             info_dict[current_ign] = [line]
 
          elif current_ign:
@@ -29,9 +29,9 @@ with open(file_path, "r") as file:
 while True:        
       while True:
              try: 
-                search_ign = input("IGN please: ")
+                search_ign = input("IGN please: ").strip().lower()
                 
-                if search_ign.lower() in info_dict:
+                if search_ign in info_dict:
                  print(f"info on {search_ign}")
                  print(f"\n".join(info_dict[search_ign]))
                  break
@@ -45,12 +45,11 @@ while True:
                print("wrong input, try again.")
                break
       try:
-        retry = input("do you wanna input again? y/n: " )
-        if retry == "n":
-            print("maybe another day then")
-            break
-        else: 
-            continue
+        retry = input("do you wanna input again? y/n: " ).strip().lower()
+        if retry != "y":
+           print("maybe another day then :(")
+           break
+         
       except:
          print("invalid, y/n only.")
          break
