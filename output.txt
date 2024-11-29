@@ -10,3 +10,9 @@ MLID: 1385769345
 server: ph
 guardian: aia
 rank: mythical honor
+IGN: jared
+level: 18
+MLID: 1234564367
+server: ph
+guardian: mom
+rank: mg

@@ -16,27 +16,25 @@ while True:
         info = []
 
         for i, line in enumerate(lines):
-          if line.startswith(f"IGN: {search_ign}"): 
+          if line.startswith(f"IGN: {search_ign}") and not line.startswith(f"IGN: "): 
                 searched = True
-                info.append(lines)
+                info.append(line.strip())
 
                 for subsequent_line in lines[i + 1:]:
                      if subsequent_line.startswith("IGN:"):
                           break
-                     info.append(subsequent_line)
+                     info.append(subsequent_line.strip())
 
         
       
-            
-
                 
           if searched == True:
             print(f"info on {search_ign}")
             print(f"\n".join(info))
-            break
+            
           else:
             print(f"no info for {search_ign}")
-            break
+            
                
       
       

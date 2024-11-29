@@ -14,7 +14,7 @@ while True:
     while True:
         try:
             IGN = input("enter your in game name: ")
-            level = int(input("enter your age: "))
+            level = int(input("enter your level: "))
             MLID = (input("enter your account ID: "))
             server = input("enter your server: ")
             guardian = input("enter name of guardian: ")
