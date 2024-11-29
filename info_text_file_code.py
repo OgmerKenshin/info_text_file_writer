@@ -17,6 +17,10 @@ while True:
           if line.startswith(f"IGN: {search_ign}"): 
                 searched = True 
                 info = [line]
+          elif line.startswith(f"level: {search_ign[+1]}"):
+                searched = True
+                info = [line]
+      
                 
           elif info:
                 info.append(line)

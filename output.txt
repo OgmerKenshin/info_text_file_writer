@@ -4,3 +4,9 @@ MLID: 1234567891
 server: ph
 guardian: tita
 rank: mythical honor
+IGN: kenshin
+level: 18
+MLID: 1385769345
+server: ph
+guardian: aia
+rank: mythical honor
