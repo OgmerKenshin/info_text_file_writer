@@ -13,15 +13,16 @@ while True:
     searched = False
     with open(file_path, "r") as file:
         info = []
-        for line in file:
+        for i, line in file:
           if line.startswith(f"IGN: {search_ign}"): 
                 searched = True 
                 info = [line]
                 info.append(line)
-          
-          if searched and line.startswith(f"level: ")[1]:
-                info.append(line)
-                print("level found")
+          for k in range(i +1, len(line)):
+               if line[k].startswith("IGN:"): 
+                   break
+               info.append(line[k])
+               break
 
                 
           if searched is True:
